@@ -17,7 +17,7 @@ on:
 env:
   REGISTRY_USER: ${{ github.actor }}
   REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
-  IMAGE_REGISTRY: ghcr.io/thomastjdev
+  IMAGE_REGISTRY: ghcr.io/jogai
 
 
 jobs:
@@ -114,8 +114,8 @@ jobs:
             -t ${{ inputs.container }} \
             --label "org.opencontainers.image.created=$(date --iso-8601=seconds)" \
             --label "org.opencontainers.image.version=${{github.ref_name}}" \
-            --label "org.opencontainers.image.vendor=ThomasTJdev" \
-            --label "org.opencontainers.image.source=https://github.com/ThomasTJdev/nimletter" \
+            --label "org.opencontainers.image.vendor=Jogai" \
+            --label "org.opencontainers.image.source=https://github.com/Jogai/nimletter" \
             | tee build.log
 
 
